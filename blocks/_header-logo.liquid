@@ -19,6 +19,7 @@
   endif
 
   assign alt_text_fallback = 'accessibility.home_logo_alt' | t: store_name: shop.name
+  assign tn_logo_url = 'https://cdn.shopify.com/s/files/1/0816/4609/2515/files/travelnivo-logo-cropped.png?v=1787761856'
 %}
 
 {% comment %}
@@ -41,8 +42,13 @@
   {{ block.shopify_attributes }}
 >
   {% liquid
-    assign logo_width = settings.logo_height | times: settings.logo.aspect_ratio | ceil
-    assign logo_width_mobile = settings.logo_height_mobile | times: settings.logo.aspect_ratio | ceil
+    if settings.logo != blank
+      assign logo_width = settings.logo_height | times: settings.logo.aspect_ratio | ceil
+      assign logo_width_mobile = settings.logo_height_mobile | times: settings.logo.aspect_ratio | ceil
+    else
+      assign logo_width = settings.logo_height | times: 3.06 | ceil
+      assign logo_width_mobile = settings.logo_height_mobile | times: 3.06 | ceil
+    endif
     assign inverse_logo_width = settings.logo_height | times: inverse_logo.aspect_ratio | ceil
     assign inverse_logo_width_mobile = settings.logo_height_mobile | times: inverse_logo.aspect_ratio | ceil
     assign logo_style = '--header-logo-image-width: ' | append: logo_width | append: 'px;' | append: '--header-logo-image-width-mobile: ' | append: logo_width_mobile | append: 'px; --header-logo-image-height: ' | append: settings.logo_height | append: 'px; --header-logo-image-height-mobile: ' | append: settings.logo_height_mobile | append: 'px;'
@@ -55,14 +61,26 @@
     {% endif %}
     data-testid="header-logo"
   >
-    {% render 'image',
-      image: settings.logo,
-      class: 'header-logo__image',
-      height: settings.logo_height,
-      alt_text_fallback: alt_text_fallback,
-      text_fallback: shop.name,
-      style: logo_style
-    %}
+    {% if settings.logo != blank %}
+      {% render 'image',
+        image: settings.logo,
+        class: 'header-logo__image',
+        height: settings.logo_height,
+        alt_text_fallback: alt_text_fallback,
+        text_fallback: shop.name,
+        style: logo_style
+      %}
+    {% else %}
+      <img
+        class="header-logo__image"
+        src="{{ tn_logo_url }}"
+        alt="{{ alt_text_fallback | escape }}"
+        width="{{ logo_width }}"
+        height="{{ settings.logo_height }}"
+        loading="eager"
+        style="{{ logo_style }}"
+      >
+    {% endif %}
   </span>
 
   {% if use_inverse_logo %}
