@@ -1,0 +1,104 @@
+{% assign packing = all_products['travelnivo-8-piece-packing-cube-set'] %}
+{% assign cloud = all_products['travelnivo-cloud-travel-organizer'] %}
+
+<section class="tn-featured">
+  <div class="tn-featured__inner">
+    <div class="tn-featured__header">
+      <div>
+        <p class="tn-featured__eyebrow">TRAVEL ESSENTIALS</p>
+        <h2>Useful things you’ll actually pack.</h2>
+      </div>
+      <a href="/collections/travel-essentials">View all</a>
+    </div>
+
+    <div class="tn-featured__grid">
+      <article class="tn-product">
+        <a class="tn-product__image" href="{% if packing != blank %}{{ packing.url }}{% else %}/collections/travel-essentials{% endif %}">
+          <img src="https://cdn.shopify.com/s/files/1/0816/4609/2515/files/7a103773-12bf-4bc5-8b8d-505a5532d23e.jpg?v=1787745562" alt="TravelNivo 8-piece packing cube set" width="900" height="900" loading="lazy">
+          <span>8-piece set</span>
+        </a>
+        <div class="tn-product__meta">
+          <div>
+            <h3>{% if packing != blank %}{{ packing.title }}{% else %}TravelNivo 8-Piece Packing Cube Set{% endif %}</h3>
+            <p>Separate clothes, shoes, and smaller essentials so your suitcase stays easier to manage.</p>
+          </div>
+          <strong>{% if packing != blank %}{{ packing.price | money }}{% else %}$34.99{% endif %}</strong>
+        </div>
+      </article>
+
+      <article class="tn-product">
+        <a class="tn-product__image" href="{% if cloud != blank %}{{ cloud.url }}{% else %}/collections/travel-essentials{% endif %}">
+          <img src="https://cdn.shopify.com/s/files/1/0816/4609/2515/files/0bd59e2d-c97d-4d2c-9802-c237510c6710.jpg?v=1787746226" alt="TravelNivo Cloud Travel Organizer in beige" width="900" height="900" loading="lazy">
+          <span>Everyday organizer</span>
+        </a>
+        <div class="tn-product__meta">
+          <div>
+            <h3>{% if cloud != blank %}{{ cloud.title }}{% else %}TravelNivo Cloud Travel Organizer{% endif %}</h3>
+            <p>A cute wide-opening bag for toiletries, cosmetics, jewelry, and other small travel essentials.</p>
+          </div>
+          <strong>{% if cloud != blank %}{{ cloud.price | money }}{% else %}$24.99{% endif %}</strong>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .tn-featured { background: #fffdf8; color: #17383a; padding: clamp(64px, 8vw, 104px) 20px; }
+  .tn-featured__inner { width: min(1180px, 100%); margin: 0 auto; }
+  .tn-featured__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 24px;
+    margin-bottom: 30px;
+  }
+  .tn-featured__eyebrow { margin: 0 0 8px; font-size: .72rem; font-weight: 700; letter-spacing: .18em; }
+  .tn-featured h2 { margin: 0; max-width: 720px; font-size: clamp(2rem, 4vw, 4rem); line-height: 1; letter-spacing: -.045em; }
+  .tn-featured__header > a { color: #17383a; text-underline-offset: 5px; white-space: nowrap; }
+  .tn-featured__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(18px, 3vw, 34px); }
+  .tn-product { min-width: 0; }
+  .tn-product__image {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 24px;
+    background: #eee5db;
+  }
+  .tn-product__image img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1.08 / 1;
+    object-fit: cover;
+    transition: transform 320ms ease;
+  }
+  .tn-product__image:hover img { transform: scale(1.025); }
+  .tn-product__image span {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    padding: 8px 11px;
+    border-radius: 999px;
+    background: rgba(255,253,248,.9);
+    color: #17383a;
+    font-size: .75rem;
+    font-weight: 650;
+  }
+  .tn-product__meta { display: flex; justify-content: space-between; align-items: start; gap: 24px; padding: 18px 4px 0; }
+  .tn-product__meta h3 { margin: 0; font-size: clamp(1.15rem, 2vw, 1.45rem); }
+  .tn-product__meta p { margin: 8px 0 0; color: #607071; line-height: 1.55; max-width: 520px; }
+  .tn-product__meta strong { white-space: nowrap; font-size: 1.05rem; }
+  @media (max-width: 700px) {
+    .tn-featured__header { align-items: start; }
+    .tn-featured__grid { grid-template-columns: 1fr; }
+    .tn-product__meta { gap: 12px; }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "TravelNivo featured",
+  "settings": [],
+  "presets": [{"name": "TravelNivo featured"}]
+}
+{% endschema %}

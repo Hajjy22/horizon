@@ -55,7 +55,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>Join our email list</h2>",
+                "text": "<h2>Travel better with TravelNivo</h2>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
@@ -80,7 +80,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Get exclusive deals and early access to new products.</p>",
+                "text": "<p>Useful travel organizers and simple packing ideas for smoother trips.</p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
@@ -132,11 +132,7 @@
               "blocks": {}
             }
           },
-          "block_order": [
-            "text_pF6rVi",
-            "text_HafH7P",
-            "email-signup_HafH7P"
-          ]
+          "block_order": ["text_pF6rVi", "text_HafH7P", "email-signup_HafH7P"]
         },
         "menu_footer": {
           "type": "menu",
@@ -173,11 +169,7 @@
           }
         }
       },
-      "block_order": [
-        "group_wErUQf",
-        "menu_footer",
-        "menu_main"
-      ],
+      "block_order": ["group_wErUQf", "menu_footer", "menu_main"],
       "name": "t:names.footer",
       "settings": {
         "section_width": "page-width",
@@ -193,7 +185,7 @@
         "copyright": {
           "type": "footer-copyright",
           "settings": {
-            "show_powered_by": true,
+            "show_powered_by": false,
             "font_size": "0.75rem",
             "case": "none"
           }
@@ -208,19 +200,15 @@
         "social_icons": {
           "type": "social-links",
           "settings": {
-            "facebook_url": "https://www.facebook.com",
-            "instagram_url": "https://www.instagram.com",
-            "youtube_url": "https://www.youtube.com",
-            "tiktok_url": "https://www.tiktok.com",
-            "twitter_url": "https://www.twitter.com"
+            "facebook_url": "",
+            "instagram_url": "",
+            "youtube_url": "",
+            "tiktok_url": "",
+            "twitter_url": ""
           }
         }
       },
-      "block_order": [
-        "copyright",
-        "policy_list",
-        "social_icons"
-      ],
+      "block_order": ["copyright", "policy_list", "social_icons"],
       "settings": {
         "section_width": "page-width",
         "gap": 24,
@@ -231,8 +219,5 @@
       }
     }
   },
-  "order": [
-    "footer",
-    "utilities"
-  ]
+  "order": ["footer", "utilities"]
 }

@@ -1,0 +1,44 @@
+<section class="tn-benefits">
+  <div class="tn-benefits__inner">
+    <div class="tn-benefit">
+      <div class="tn-benefit__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M5 7.5h14v11H5zM8 7.5V5.8A2.8 2.8 0 0 1 10.8 3h2.4A2.8 2.8 0 0 1 16 5.8v1.7M9 11v4M15 11v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </div>
+      <h3>Easy organization</h3>
+      <p>Keep clothes and smaller essentials separated instead of mixed together.</p>
+    </div>
+    <div class="tn-benefit">
+      <div class="tn-benefit__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 12h16M12 4v16M7.5 7.5l9 9M16.5 7.5l-9 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <h3>Made for packing</h3>
+      <p>Practical organizers designed to fit naturally into carry-ons and luggage.</p>
+    </div>
+    <div class="tn-benefit">
+      <div class="tn-benefit__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M6 6h12v12H6zM9 9h6v6H9z" stroke="currentColor" stroke-width="1.5"/><path d="M4 10v4M20 10v4M10 4h4M10 20h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <h3>Less travel clutter</h3>
+      <p>Find what you need faster without digging through every corner of your bag.</p>
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .tn-benefits { background: #17383a; color: #fffdf8; padding: clamp(54px, 7vw, 84px) 20px; }
+  .tn-benefits__inner { width: min(1180px, 100%); margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .tn-benefit { padding: clamp(20px, 3vw, 30px); border: 1px solid rgba(255,255,255,.16); border-radius: 22px; }
+  .tn-benefit__icon { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 50%; background: rgba(255,255,255,.1); margin-bottom: 28px; }
+  .tn-benefit__icon svg { width: 23px; height: 23px; }
+  .tn-benefit h3 { margin: 0; font-size: 1.25rem; }
+  .tn-benefit p { margin: 10px 0 0; color: rgba(255,253,248,.72); line-height: 1.6; }
+  @media (max-width: 760px) { .tn-benefits__inner { grid-template-columns: 1fr; } .tn-benefit__icon { margin-bottom: 18px; } }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "TravelNivo benefits",
+  "settings": [],
+  "presets": [{"name": "TravelNivo benefits"}]
+}
+{% endschema %}

@@ -17,7 +17,7 @@
         "announcement_BxgCk9": {
           "type": "_announcement",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "Smart travel essentials for easier packing",
             "link": "",
             "font": "var(--font-subheading--family)",
             "font_size": "0.75rem",
@@ -28,9 +28,7 @@
           "blocks": {}
         }
       },
-      "block_order": [
-        "announcement_BxgCk9"
-      ],
+      "block_order": ["announcement_BxgCk9"],
       "name": "t:names.announcement_bar",
       "settings": {
         "speed": 5,
@@ -84,7 +82,7 @@
         "search_row": "top",
         "show_country": true,
         "country_selector_style": false,
-        "show_language": true,
+        "show_language": false,
         "localization_font": "heading",
         "localization_font_size": "0.875rem",
         "localization_position": "right",
@@ -101,8 +99,5 @@
       }
     }
   },
-  "order": [
-    "header_announcements_9jGBFp",
-    "header_section"
-  ]
+  "order": ["header_announcements_9jGBFp", "header_section"]
 }

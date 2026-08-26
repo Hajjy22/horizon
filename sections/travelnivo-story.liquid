@@ -1,0 +1,35 @@
+<section class="tn-story">
+  <div class="tn-story__inner">
+    <div class="tn-story__media">
+      <img src="https://cdn.shopify.com/s/files/1/0816/4609/2515/files/5c67bc44-07a7-4d2f-ab8e-b0e6a924a24e.jpg?v=1787745562" alt="Travel packing organizers arranged for a trip" width="1100" height="1100" loading="lazy">
+    </div>
+    <div class="tn-story__copy">
+      <p class="tn-story__eyebrow">WHY TRAVELNIVO</p>
+      <h2>Small organizers.<br>Smoother trips.</h2>
+      <p>TravelNivo focuses on simple travel tools that make packing easier to manage. Less digging, less mess, and a clearer place for the things you bring with you.</p>
+      <a class="tn-story__link" href="/collections/travel-essentials">Shop the collection <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .tn-story { background: #e9ded0; color: #17383a; padding: clamp(64px, 8vw, 108px) 20px; }
+  .tn-story__inner { width: min(1180px, 100%); margin: 0 auto; display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: clamp(32px, 7vw, 92px); }
+  .tn-story__media { overflow: hidden; border-radius: 28px; background: #fff; }
+  .tn-story__media img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+  .tn-story__eyebrow { margin: 0 0 14px; font-size: .72rem; font-weight: 700; letter-spacing: .18em; }
+  .tn-story h2 { margin: 0; font-size: clamp(2.5rem, 5vw, 5.4rem); line-height: .96; letter-spacing: -.05em; }
+  .tn-story__copy > p:not(.tn-story__eyebrow) { margin: 26px 0 0; max-width: 540px; color: #526668; line-height: 1.7; font-size: 1.03rem; }
+  .tn-story__link { display: inline-flex; gap: 12px; align-items: center; margin-top: 28px; color: #17383a; font-weight: 700; text-underline-offset: 5px; }
+  .tn-story__link span { transition: transform 160ms ease; }
+  .tn-story__link:hover span { transform: translateX(3px); }
+  @media (max-width: 760px) { .tn-story__inner { grid-template-columns: 1fr; } }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "TravelNivo story",
+  "settings": [],
+  "presets": [{"name": "TravelNivo story"}]
+}
+{% endschema %}
