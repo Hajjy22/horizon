@@ -40,6 +40,8 @@
     {%- render 'card-hover-effect-styles' -%}
     {%- render 'fonts' -%}
     {%- render 'scripts' -%}
+    {{ 'travelnivo-enhancements.css' | asset_url | stylesheet_tag }}
+    <script src="{{ 'travelnivo-enhancements.js' | asset_url }}" defer></script>
     {%- render 'theme-styles-variables' -%}
     {%- render 'color-palette' -%}
 
@@ -190,6 +192,23 @@
 
     {% if settings.quick_add or settings.mobile_quick_add %}
       {% render 'quick-add-modal' %}
+    {% endif %}
+
+    {% if template.name == 'product' and product != blank %}
+      <aside class="tn-sticky-buy" data-tn-sticky-buy aria-label="Quick purchase">
+        <div class="tn-sticky-buy__details">
+          <span>Ready for takeoff?</span>
+          <strong>{{ product.title | truncate: 38 }}</strong>
+        </div>
+        {% if product.has_only_default_variant and product.selected_or_first_available_variant.available %}
+          <form action="{{ routes.cart_add_url }}" method="post" data-tn-quick-add>
+            <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+            <button class="tn-sticky-buy__button" type="submit" data-tn-quick-add-button>Add to bag</button>
+          </form>
+        {% else %}
+          <a class="tn-sticky-buy__button" href="#MainContent">Choose options</a>
+        {% endif %}
+      </aside>
     {% endif %}
   </body>
 </html>

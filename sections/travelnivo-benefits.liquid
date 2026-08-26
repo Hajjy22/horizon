@@ -1,44 +1,55 @@
-<section class="tn-benefits">
+<section class="tn-benefits" data-tn-section>
   <div class="tn-benefits__inner">
-    <div class="tn-benefit">
-      <div class="tn-benefit__icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M5 7.5h14v11H5zM8 7.5V5.8A2.8 2.8 0 0 1 10.8 3h2.4A2.8 2.8 0 0 1 16 5.8v1.7M9 11v4M15 11v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-      </div>
-      <h3>Easy organization</h3>
-      <p>Keep clothes and smaller essentials separated instead of mixed together.</p>
+    <div class="tn-benefits__intro" data-tn-reveal>
+      <p class="tn-benefits__eyebrow">THE TRAVELNIVO METHOD / 03</p>
+      <h2>Less rummaging.<br><em>More going.</em></h2>
     </div>
-    <div class="tn-benefit">
-      <div class="tn-benefit__icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M4 12h16M12 4v16M7.5 7.5l9 9M16.5 7.5l-9 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    <div class="tn-benefits__grid">
+      <div class="tn-benefit" data-tn-reveal style="--tn-delay: 70ms;">
+        <div class="tn-benefit__number">01</div>
+        <div class="tn-benefit__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M5 7.5h14v11H5zM8 7.5V5.8A2.8 2.8 0 0 1 10.8 3h2.4A2.8 2.8 0 0 1 16 5.8v1.7M9 11v4M15 11v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Everything has a place</h3>
+        <p>Separate clothes, shoes, tech, and smaller essentials so your bag stays easy to read.</p>
       </div>
-      <h3>Made for packing</h3>
-      <p>Practical organizers designed to fit naturally into carry-ons and luggage.</p>
-    </div>
-    <div class="tn-benefit">
-      <div class="tn-benefit__icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M6 6h12v12H6zM9 9h6v6H9z" stroke="currentColor" stroke-width="1.5"/><path d="M4 10v4M20 10v4M10 4h4M10 20h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <div class="tn-benefit" data-tn-reveal style="--tn-delay: 140ms;">
+        <div class="tn-benefit__number">02</div>
+        <div class="tn-benefit__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 12h16M12 4v16M7.5 7.5l9 9M16.5 7.5l-9 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Built around real packing</h3>
+        <p>Useful shapes and simple details that fit naturally into carry-ons, weekenders, and luggage.</p>
       </div>
-      <h3>Less travel clutter</h3>
-      <p>Find what you need faster without digging through every corner of your bag.</p>
+      <div class="tn-benefit" data-tn-reveal style="--tn-delay: 210ms;">
+        <div class="tn-benefit__number">03</div>
+        <div class="tn-benefit__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M6 6h12v12H6zM9 9h6v6H9z" stroke="currentColor" stroke-width="1.5"/><path d="M4 10v4M20 10v4M10 4h4M10 20h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Find things faster</h3>
+        <p>Less digging through every corner of your bag means a smoother start, stop, and return home.</p>
+      </div>
     </div>
   </div>
 </section>
 
 {% stylesheet %}
-  .tn-benefits { background: #17383a; color: #fffdf8; padding: clamp(54px, 7vw, 84px) 20px; }
-  .tn-benefits__inner { width: min(1180px, 100%); margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-  .tn-benefit { padding: clamp(20px, 3vw, 30px); border: 1px solid rgba(255,255,255,.16); border-radius: 22px; }
-  .tn-benefit__icon { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 50%; background: rgba(255,255,255,.1); margin-bottom: 28px; }
-  .tn-benefit__icon svg { width: 23px; height: 23px; }
-  .tn-benefit h3 { margin: 0; font-size: 1.25rem; }
-  .tn-benefit p { margin: 10px 0 0; color: rgba(255,253,248,.72); line-height: 1.6; }
-  @media (max-width: 760px) { .tn-benefits__inner { grid-template-columns: 1fr; } .tn-benefit__icon { margin-bottom: 18px; } }
+  .tn-benefits { background: #17383a; color: #fffdf8; padding: clamp(68px, 9vw, 124px) 20px; }
+  .tn-benefits__inner { width: min(1240px, 100%); margin: 0 auto; display: grid; grid-template-columns: minmax(220px, .7fr) minmax(0, 1.3fr); gap: clamp(30px, 7vw, 104px); align-items: start; }
+  .tn-benefits__eyebrow { margin: 0 0 14px; color: #f4b678; font-size: .68rem; font-weight: 800; letter-spacing: .18em; }
+  .tn-benefits__intro h2 { margin: 0; font-size: clamp(2.6rem, 5vw, 5.5rem); line-height: .9; letter-spacing: -.06em; }
+  .tn-benefits__intro em { color: #f4b678; font-style: normal; }
+  .tn-benefits__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  .tn-benefit { position: relative; min-height: 270px; padding: 22px; border: 1px solid rgba(255,255,255,.18); border-radius: 22px 22px 22px 5px; background: rgba(255,255,255,.04); }
+  .tn-benefit__number { position: absolute; top: 20px; right: 20px; color: rgba(255,253,248,.42); font-size: .68rem; font-weight: 800; letter-spacing: .12em; }
+  .tn-benefit__icon { width: 42px; height: 42px; display: grid; place-items: center; margin-bottom: 52px; border-radius: 50%; background: rgba(255,255,255,.1); color: #f4b678; }
+  .tn-benefit__icon svg { width: 22px; height: 22px; }
+  .tn-benefit h3 { margin: 0; font-size: 1.08rem; line-height: 1.15; }
+  .tn-benefit p { margin: 10px 0 0; color: rgba(255,253,248,.7); font-size: .9rem; line-height: 1.55; }
+  @media (max-width: 980px) { .tn-benefits__inner { grid-template-columns: 1fr; } .tn-benefits__intro h2 { max-width: 600px; } }
+  @media (max-width: 680px) { .tn-benefits { padding-inline: 14px; } .tn-benefits__grid { grid-template-columns: 1fr; } .tn-benefit { min-height: auto; } .tn-benefit__icon { margin-bottom: 30px; } }
 {% endstylesheet %}
 
 {% schema %}
-{
-  "name": "TravelNivo benefits",
-  "settings": [],
-  "presets": [{"name": "TravelNivo benefits"}]
-}
+{"name":"TravelNivo benefits","settings":[],"presets":[{"name":"TravelNivo benefits"}]}
 {% endschema %}
