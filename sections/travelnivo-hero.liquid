@@ -28,6 +28,9 @@
       <div class="tn-hero__micro" aria-label="TravelNivo values">
         <span>Organize</span><i aria-hidden="true"></i><span>Pack</span><i aria-hidden="true"></i><span>Go</span>
       </div>
+      <div class="tn-hero__route-line" aria-hidden="true">
+        <svg viewBox="0 0 300 32" fill="none"><path d="M2 18C35 2 57 29 88 16C118 4 140 25 169 14C198 3 220 27 249 14C267 6 282 10 298 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="298" cy="2" r="3" fill="currentColor"/></svg>
+      </div>
     </div>
 
     <div class="tn-hero__visual" data-tn-reveal style="--tn-delay: 120ms;">
@@ -51,33 +54,35 @@
 </section>
 
 {% stylesheet %}
-  .tn-hero { background: #f8f3eb; color: #17383a; padding: clamp(32px, 6vw, 88px) 20px clamp(58px, 8vw, 112px); overflow: hidden; }
+  .tn-hero { background: #f5f4ef; color: #2f3838; padding: clamp(32px, 6vw, 88px) 20px clamp(58px, 8vw, 112px); overflow: hidden; }
   .tn-hero__inner { width: min(1240px, 100%); margin: 0 auto; display: grid; grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr); gap: clamp(32px, 6vw, 92px); align-items: center; }
-  .tn-eyebrow { margin: 0 0 18px; color: #e48a52; font-size: .72rem; font-weight: 800; letter-spacing: .2em; }
+  .tn-eyebrow { margin: 0 0 18px; color: #5898a0; font-size: .72rem; font-weight: 800; letter-spacing: .2em; }
   .tn-hero h1 { margin: 0; max-width: 720px; font-size: clamp(3.1rem, 6.8vw, 7.4rem); line-height: .88; letter-spacing: -.065em; text-wrap: balance; }
-  .tn-hero h1 em { color: #e48a52; font-style: normal; }
-  .tn-hero__lead { max-width: 540px; margin: 28px 0 0; color: #466365; font-size: clamp(1rem, 1.5vw, 1.2rem); line-height: 1.65; }
+  .tn-hero h1 em { color: #5898a0; font-style: normal; }
+  .tn-hero__lead { max-width: 540px; margin: 28px 0 0; color: #486568; font-size: clamp(1rem, 1.5vw, 1.2rem); line-height: 1.65; }
   .tn-hero__actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 30px; }
   .tn-hero__add-form { margin: 0; }
   .tn-button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 50px; padding: 0 21px; border-radius: 999px; font-weight: 700; text-decoration: none; transition: transform 180ms ease, background-color 180ms ease, color 180ms ease; }
   .tn-button:hover { transform: translateY(-2px); }
   .tn-button span { transition: transform 180ms ease; }
   .tn-button:hover span { transform: translateX(3px); }
-  .tn-button--primary { background: #17383a; color: #fffdf8; }
+  .tn-button--primary { background: #2f3838; color: #fbfaf7; }
   .tn-button--primary:hover { background: #28575a; }
-  .tn-button--quiet { border: 1px solid #b9aaa0; color: #17383a; background: rgba(255,255,255,.42); }
-  .tn-button--quiet:hover { background: #fffdf8; }
+  .tn-button--quiet { border: 1px solid #a9bbb9; color: #2f3838; background: rgba(255,255,255,.42); }
+  .tn-button--quiet:hover { background: #fbfaf7; }
   .tn-hero__micro { display: flex; align-items: center; gap: 10px; margin-top: 32px; color: #6a726e; font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
   .tn-hero__micro i { width: 4px; height: 4px; border-radius: 50%; background: currentColor; }
-  .tn-hero__visual { position: relative; min-width: 0; padding: clamp(14px, 2vw, 24px); border-radius: 34px 34px 34px 8px; background: #e9ded0; }
+  .tn-hero__route-line { width: min(300px, 80%); margin-top: 24px; color: #5898a0; opacity: .82; }
+  .tn-hero__route-line svg { display: block; width: 100%; height: auto; }
+  .tn-hero__visual { position: relative; min-width: 0; padding: clamp(14px, 2vw, 24px); border-radius: 34px 34px 34px 8px; background: #e8dcc8; }
   .tn-hero__image-link { display: block; overflow: hidden; border-radius: 24px 24px 24px 5px; background: #fff; }
   .tn-hero__image-link img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; transition: transform 600ms cubic-bezier(.2,.7,.2,1); }
   .tn-hero__image-link:hover img { transform: scale(1.035); }
-  .tn-hero__product-card { position: absolute; right: clamp(22px, 4vw, 48px); bottom: clamp(22px, 4vw, 48px); left: clamp(22px, 4vw, 48px); display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 15px 17px; border-radius: 17px; background: rgba(255,253,248,.92); color: #17383a; text-decoration: none; box-shadow: 0 18px 42px rgba(23,56,58,.14); backdrop-filter: blur(12px); }
+  .tn-hero__product-card { position: absolute; right: clamp(22px, 4vw, 48px); bottom: clamp(22px, 4vw, 48px); left: clamp(22px, 4vw, 48px); display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 15px 17px; border-radius: 17px; background: rgba(251,250,247,.92); color: #2f3838; text-decoration: none; box-shadow: 0 18px 42px rgba(47,56,56,.14); backdrop-filter: blur(12px); }
   .tn-hero__product-card span { display: grid; gap: 4px; font-size: .92rem; line-height: 1.25; }
-  .tn-hero__product-card small { color: #e48a52; font-size: .64rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+  .tn-hero__product-card small { color: #5898a0; font-size: .64rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
   .tn-hero__product-card strong { white-space: nowrap; font-size: 1rem; }
-  .tn-hero__stamp { position: absolute; top: 8%; right: -14px; display: grid; place-items: center; width: 70px; height: 70px; border: 1px solid rgba(23,56,58,.28); border-radius: 50%; color: #17383a; font-size: .92rem; font-weight: 800; line-height: .9; text-align: center; transform: rotate(11deg); }
+  .tn-hero__stamp { position: absolute; top: 8%; right: -14px; display: grid; place-items: center; width: 70px; height: 70px; border: 1px solid rgba(47,56,56,.28); border-radius: 50%; color: #2f3838; font-size: .92rem; font-weight: 800; line-height: .9; text-align: center; transform: rotate(11deg); }
   .tn-hero__stamp small { font-size: .42rem; letter-spacing: .12em; }
   @media (max-width: 850px) { .tn-hero__inner { grid-template-columns: 1fr; } .tn-hero__visual { order: 2; margin-inline: 0; } }
   @media (max-width: 520px) { .tn-hero { padding-inline: 14px; } .tn-hero__actions { display: grid; } .tn-button { width: 100%; } .tn-hero__product-card { right: 18px; bottom: 18px; left: 18px; font-size: .84rem; } .tn-hero__stamp { right: -8px; width: 58px; height: 58px; } }
